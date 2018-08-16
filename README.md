@@ -30,3 +30,14 @@ A CircleCI config could have a deploy step with the following:
           sentry-cli releases deploys $RELEASE new -e prod -t $((now-start))
           sentry-cli releases finalize $RELEASE
 ```
+
+# Building
+
+To build this yourself and push it to your own repo, open up the `Makefile` and adjust the `NAME`
+argument to suit your needs. Then:
+
+```bash
+> make
+> make push
+```
+
