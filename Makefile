@@ -1,8 +1,8 @@
 NAME ?= verypossible/ecs-sentry-deployment-image
-TAG ?= latest
+TAG ?= $(shell git rev-parse --short HEAD)
 
 all : Dockerfile
-	docker build -t $(NAME):$(TAG) .
+	docker build $(ARGS) -t $(NAME):$(TAG) .
 
 
 push :
